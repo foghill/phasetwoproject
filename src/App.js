@@ -25,20 +25,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center my-4 ubuntu">
+      <h1 className="text-center my-4">
         Rick and Morty <span className="text-primary">Wiki</span>
       </h1>
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            <Filters />
-          </div>
-          <div className="col-8">
-            <div className="row">
-              <Cards results={results} />
-              <Cards />
-              <Cards />
-            </div>
+          <Filters />
+        </div>
+        <div className="col-lg-8 col-12">
+          <div className="row">
+            <Cards results={results} />
+            <Cards />
+            <Cards />
           </div>
         </div>
       </div>
