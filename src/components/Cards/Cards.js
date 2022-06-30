@@ -10,10 +10,10 @@ const Cards = ({ results }) => {
       //destructure result for key
       let { id, name, image, location, status } = result;
       return (
-        <div key={id} className="col-4 position-relative">
+        <div key={id} className="col-4 mb-4 position-relative">
           <div className={styles.cards}>
-            <img src={image} alt="" className="img-fluid" />
-            <div className="content">
+            <img src={image} alt="" className={`${styles.img} img-fluid`} />
+            <div style={{ padding: "10px" }} className="content">
               <div className="fs-4 fw-bold mb-4">{name}</div>
               <div className="">
                 <div className="fs-6">Last location</div>
@@ -22,9 +22,33 @@ const Cards = ({ results }) => {
               </div>
             </div>
           </div>
-          <div className={`${styles.badge} position-absolute badge bd-danger`}>
-            {status}
-          </div>
+          {(() => {
+            if (status === "Dead") {
+              return (
+                <div
+                  className={`${styles.badge} position-absolute badge bg-danger`}
+                >
+                  {status}
+                </div>
+              );
+            } else if (status === "Alive") {
+              return (
+                <div
+                  className={`${styles.badge} position-absolute badge bg-success`}
+                >
+                  {status}
+                </div>
+              );
+            } else {
+              return (
+                <div
+                  className={`${styles.badge} position-absolute badge bg-secondary`}
+                >
+                  {status}
+                </div>
+              );
+            }
+          })()}
         </div>
       );
     });
@@ -32,6 +56,7 @@ const Cards = ({ results }) => {
     display = "No Characters Found :/";
   }
 
-  return <div>{display}</div>;
+  return <>{display}</>;
 };
+
 export default Cards;
