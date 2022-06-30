@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
+import Button from "@mui/material/Button";
 
 function App() {
+  const [data, setData] = React.useState([]);
+  const getCharacters = () => {
+    Axios.get("https://rickandmortyapi.com/api/character/").then((data) => {
+      console.log(data);
+      setData(data);
+    });
+  };
+
+  useEffect(() => {
+    getCharacters();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button variant="contained" onClick={getCharacters}>
+        Fetch Characters
+      </Button>
     </div>
   );
 }
