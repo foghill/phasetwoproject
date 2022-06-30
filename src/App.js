@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
+import Search from "./components/Search/Search";
 
 function App() {
   //state to hold page number (default is 1)
@@ -29,6 +30,7 @@ function App() {
       <h1 className="text-center my-4">
         Rick and Morty <span className="text-primary">Wiki</span>
       </h1>
+      <Search />
       <div className="container">
         <div className="row">
           <Filters />
