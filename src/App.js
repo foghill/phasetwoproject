@@ -37,12 +37,10 @@ function App() {
         <div className="col-lg-8 col-12">
           <div className="row">
             <Cards results={results} />
-            <Cards />
-            <Cards />
           </div>
         </div>
       </div>
-      <Pagination />
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
     </div>
   );
 }

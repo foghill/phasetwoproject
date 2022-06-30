@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Cards.module.scss";
 
 const Cards = ({ results }) => {
-  console.log(results);
   let display;
   //if there is data in results, then run the following function
   if (results) {
