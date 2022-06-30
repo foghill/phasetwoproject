@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import Button from "@mui/material/Button";
 
 function App() {
   const [data, setData] = React.useState([]);
@@ -16,11 +15,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Button variant="contained" onClick={getCharacters}>
-        Fetch Characters
-      </Button>
-    </div>
+    <>
+      <h1>Rick and Morty</h1>
+    </>
   );
 }
 
