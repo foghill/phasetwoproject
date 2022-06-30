@@ -33,7 +33,7 @@ function App() {
         <div className="row">
           <Filters />
         </div>
-        <Pagination />
+
         <div className="col-lg-8 col-12">
           <div className="row">
             <Cards results={results} />
@@ -42,6 +42,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Pagination />
     </div>
   );
 }
