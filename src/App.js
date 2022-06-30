@@ -21,6 +21,11 @@ function App() {
       <h1 className="text-center ubuntu my-4">
         Rick and Morty <span className="text-primary">Wiki</span>
       </h1>
+      <div className="container">
+        <div className="row"></div>
+        <div className="col-3"></div>
+        <div className="col-8"></div>
+      </div>
     </div>
   );
 }
