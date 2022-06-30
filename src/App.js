@@ -6,17 +6,17 @@ import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 
 function App() {
-  const [data, setData] = React.useState([]);
-  const getCharacters = () => {
-    Axios.get("https://rickandmortyapi.com/api/character/").then((data) => {
-      console.log(data);
-      setData(data);
-    });
-  };
+  const [pageNumber, setPageNumber] = useState(1);
+  const API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
+  // make an API request every time the page number changes
   useEffect(() => {
-    getCharacters();
-  }, []);
+    //use IIFE or Axios
+    (async function () {
+      let data = await fetch(API).then((res) => res.json());
+      console.log(data);
+    })();
+  }, [API]);
 
   return (
     <div className="App">
@@ -30,6 +30,8 @@ function App() {
           </div>
           <div className="col-8">
             <div className="row">
+              <Cards />
+              <Cards />
               <Cards />
             </div>
           </div>
