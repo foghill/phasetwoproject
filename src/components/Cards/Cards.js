@@ -22,6 +22,7 @@ const Cards = ({ results }) => {
               </div>
             </div>
           </div>
+          {/* use IIFE to run logic to determine badge color of Alive or Dead */}
           {(() => {
             if (status === "Dead") {
               return (

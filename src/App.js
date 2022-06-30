@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
+import Pagination from "./components/Pagination/Pagination";
 
 function App() {
   //state to hold page number (default is 1)
@@ -32,6 +33,7 @@ function App() {
         <div className="row">
           <Filters />
         </div>
+        <Pagination />
         <div className="col-lg-8 col-12">
           <div className="row">
             <Cards results={results} />
