@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 import Axios from "axios";
 
 function App() {
@@ -15,9 +17,11 @@ function App() {
   }, []);
 
   return (
-    <>
-      <h1>Rick and Morty</h1>
-    </>
+    <div className="App">
+      <h1 className="text-center ubuntu my-4">
+        Rick and Morty <span className="text-primary">Wiki</span>
+      </h1>
+    </div>
   );
 }
 
