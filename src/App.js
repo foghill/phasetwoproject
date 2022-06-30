@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-// import Axios from "axios";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 
 function App() {
-  //state to hold page number
+  //state to hold page number (default is 1)
   const [pageNumber, setPageNumber] = useState(1);
   //state to hold character information
   const [fetchedData, updateFetchedData] = useState([]);
   //destructure Object - results go into Cards. Info will go to Pagination
   let { info, results } = fetchedData;
-  console.log(results);
+  //store API link in API variable for cleaner code
   const API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
-  // make an API request every time the page number changes
+  // make an API request and get fresh data every time the page number changes
   useEffect(() => {
     //use IIFE or Axios
     (async function () {
       let data = await fetch(API).then((res) => res.json());
-      // console.log(data.results);
       updateFetchedData(data);
     })();
   }, [API]);
@@ -37,7 +35,7 @@ function App() {
           </div>
           <div className="col-8">
             <div className="row">
-              <Cards />
+              <Cards results={results} />
               <Cards />
               <Cards />
             </div>
