@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
@@ -29,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center my-4">
+      <h1 className="text-center my-4 Ubuntu">
         Rick and Morty <span className="text-primary">Wiki</span>
       </h1>
 
@@ -37,11 +36,10 @@ function App() {
       <div className="container">
         <div className="row">
           <Filters />
-        </div>
-
-        <div className="col-lg-8 col-12">
-          <div className="row">
-            <Cards results={results} />
+          <div className="col-lg-8">
+            <div className="row">
+              <Cards results={results} />
+            </div>
           </div>
         </div>
       </div>
