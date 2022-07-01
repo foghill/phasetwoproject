@@ -20,7 +20,7 @@ function App() {
   //destructure Object - results go into Cards. Info will go to Pagination
   let { info, results } = fetchedData;
   //store API link in API variable for cleaner code
-  const API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}`;
+  const API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
   // make an API request and get fresh data every time the page number changes
   useEffect(() => {
@@ -43,6 +43,8 @@ function App() {
           <Filters
             pageNumber={pageNumber}
             status={status}
+            gender={gender}
+            species={species}
             updateStatus={updateStatus}
             updateGender={updateGender}
             updateSpecies={updateSpecies}
