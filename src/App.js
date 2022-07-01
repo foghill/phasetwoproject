@@ -11,11 +11,16 @@ function App() {
   //state to hold search term (default is empty string)
   const [search, setSearch] = useState("");
   //state to hold character information
+
+  let [status, updateStatus] = useState("");
+  let [gender, updateGender] = useState("");
+  let [species, updateSpecies] = useState("");
+
   const [fetchedData, updateFetchedData] = useState([]);
   //destructure Object - results go into Cards. Info will go to Pagination
   let { info, results } = fetchedData;
   //store API link in API variable for cleaner code
-  const API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+  const API = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}`;
 
   // make an API request and get fresh data every time the page number changes
   useEffect(() => {
@@ -28,17 +33,24 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center my-4 Ubuntu">
+      <h1 className="text-center my-4 ubuntu">
         Rick and Morty <span className="text-primary">Wiki</span>
       </h1>
 
       <Search setPageNumber={setPageNumber} setSearch={setSearch} />
       <div className="container">
         <div className="row">
-          <Filters />
-          <div className="col-lg-8">
+          <Filters
+            pageNumber={pageNumber}
+            status={status}
+            updateStatus={updateStatus}
+            updateGender={updateGender}
+            updateSpecies={updateSpecies}
+            updatePageNumber={setPageNumber}
+          />
+          <div className="col-lg-8 col-12">
             <div className="row">
-              <Cards results={results} />
+              <Cards page="/" results={results} />
             </div>
           </div>
         </div>
