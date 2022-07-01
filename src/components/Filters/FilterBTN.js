@@ -1,17 +1,17 @@
 import React from "react";
 
-const FilterBTN = () => {
+const FilterBTN = ({ input, index, name }) => {
   return (
     <div>
       <div className="form-check">
         <input
           className="form-check-input x"
           type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault1"
+          name={name}
+          id={`${name}-${index}`}
         />
-        <label className="btn btn-outline-primary" for="flexradioDefault1">
-          Single Toggle
+        <label className="btn btn-outline-primary" for={`${name}-${index}`}>
+          {input}
         </label>
       </div>
     </div>
