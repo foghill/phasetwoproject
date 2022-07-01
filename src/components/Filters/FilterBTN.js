@@ -4,12 +4,15 @@ const FilterBTN = () => {
   return (
     <div>
       <div className="form-check">
-        <input className="form-check-input x" type="radio" />
-        <label className="btn btn-outline-primary">All</label>
-      </div>
-      <div className="form-check">
-        <input className="form-check-input x" type="radio" />
-        <label className="btn btn-outline-primary">All</label>
+        <input
+          className="form-check-input x"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+        />
+        <label className="btn btn-outline-primary" for="flexradioDefault1">
+          Single Toggle
+        </label>
       </div>
     </div>
   );
