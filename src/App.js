@@ -4,6 +4,7 @@ import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/Search/Search";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   //state to hold page number (default is 1)
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <h1 className="text-center my-4 ubuntu">
         Rick and Morty <span className="text-primary">Wiki</span>
       </h1>
