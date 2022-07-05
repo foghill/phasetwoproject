@@ -1,6 +1,20 @@
 # Rick and Morty Wikipedia
 
-## Packages used are:
+At its core, this web app is a minimal interface for searching across the TV show Rick and Morty's compendium including character data, locations and episode facts.
+
+## Rick and Morty API
+
+All data comes from the [Rick and Morty API](https://rickandmortyapi.com/)
+
+A working demo of this app has been hosted on Netlify and can be [accessed here](https://rickandmortyflatiron.netlify.app/)
+
+The API is called in the App.js file using the useEffect hook and an IIFE[Immediately Invoked Function Expression](https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/)
+
+The API returns three important resources in the object: Characters, Locations, Episodes.
+
+The API automatically paginates the responsonse, and returns 20 records per page. Pagination [npm package](<(https://academind.com/tutorials/reactjs-pagination)>) was used to help build naviagation and interface.
+
+## The npm packages used are:
 
 [Bootstrap](https://getbootstrap.com/)
 
@@ -14,23 +28,9 @@ Sass helps create custom stylesheets for components, here is how to [add sass to
 
 Paginate is an awesome package which helps create a page navigation bar
 
-## Rick and Morty Compendium
+## App Breakdown
 
-At its core, this web app is a minimal interface for searching across the TV show Rick and Morty's compendium including character data, locations and episode facts.
-
-All data comes from the [Rick and Morty API](https://rickandmortyapi.com/)
-
-This project was built using this awesome comprehensive API.
-
-The API is called in the App.js file using the useEffect hook and an IIFE[Immediately Invoked Function Expression](https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/)
-
-A package like Axios could have been used of course.
-
-The API returns three important resources in the object: Characters, Locations, Episodes.
-
-The API automatically paginates the responsonse, and returns 20 records per page. This is a solid tutorial on [Pagination](https://academind.com/tutorials/reactjs-pagination)
-
-It is split up into a few different components including:
+The web app is split up across a few different components including but not limited to:
 
 ### Homepage
 
