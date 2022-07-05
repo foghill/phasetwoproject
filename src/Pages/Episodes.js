@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards/Cards";
+import InputGroup from "../components/Filters/Category/InputGroup";
 
 const Episodes = () => {
   const [episodes, setEpisodes] = useState([]);
@@ -26,22 +27,23 @@ const Episodes = () => {
   return (
     <div className="container">
       <div className="row mb-3">
-        {/*get episode and airdate*/}
-        {/*sometimes there is no air date or episode from API so use ternary*/}
-        <h1 className="text-center mb-4">
-          Episode :{" "}
+        <h1 className="text-center mb-3">
+          Episode name :{" "}
           <span className="text-primary">{name === "" ? "Unknown" : name}</span>
         </h1>
-        <h5 className="text-center mb-4">
+        <h5 className="text-center">
           Air Date: {air_date === "" ? "Unknown" : air_date}
         </h5>
       </div>
-      <div className="row"></div>
-      <div className="col-lg-3 col-12 mb-4"></div>
-      <h4 className="text-center mb-4">Pick Episodes</h4>
-      <div className="col-lg-8 col-12">
-        <div className="row">
-          <Cards results={results} />
+      <div className="row">
+        <div className="col-lg-3 col-12 mb-4">
+          <h4 className="text-center mb-4">Pick Episode</h4>
+          <InputGroup />
+        </div>
+        <div className="col-lg-8 col-12">
+          <div className="row">
+            <Cards page="/episodes/" results={results} />
+          </div>
         </div>
       </div>
     </div>
