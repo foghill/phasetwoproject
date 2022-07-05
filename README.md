@@ -8,7 +8,7 @@ All data comes from the [Rick and Morty API](https://rickandmortyapi.com/)
 
 A working demo of this app has been hosted on Netlify and can be [accessed here](https://rickandmortyflatiron.netlify.app/)
 
-The API is called in the App.js file using the useEffect hook and an IIFE[Immediately Invoked Function Expression](https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/)
+The API is called in the App.js file using the useEffect hook and an [Immediately Invoked Function Expression](https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/)
 
 The API returns three important resources in the object: Characters, Locations, Episodes.
 
