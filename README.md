@@ -6,7 +6,7 @@
 
 [Sass](https://www.npmjs.com/package/sass)
 
-Sass helps create custom stylesheets for components
+Sass helps create custom stylesheets for components, here is how to [add sass to react](https://medium.com/nerd-for-tech/add-sass-to-your-react-app-in-2021-here-is-how-c7260c323a5a)
 
 [React-Router-DOM](https://www.npmjs.com/package/react-router-dom)
 
