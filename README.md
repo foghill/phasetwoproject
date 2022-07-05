@@ -12,7 +12,7 @@ The API is called in the App.js file using the useEffect hook and an [Immediatel
 
 The API returns three important resources in the object: Characters, Locations, Episodes.
 
-The API automatically paginates the responsonse, and returns 20 records per page. Pagination [npm package](<(https://academind.com/tutorials/reactjs-pagination)>) was used to help build naviagation and interface.
+The API 'paginate's the response, and returns 20 records per page. [Pagination npm package](https://academind.com/tutorials/reactjs-pagination) was used to help build the navigation and interface.
 
 ## The npm packages used are:
 
