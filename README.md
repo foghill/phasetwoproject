@@ -14,17 +14,31 @@ Sass helps create custom stylesheets for components, here is how to [add sass to
 
 Paginate is an awesome package which helps create a page navigation bar
 
-## Using the [Rick and Morty API](https://rickandmortyapi.com/)
+## Rick and Morty Compendium
+
+At its core, this web app is a minimal interface for searching across the TV show Rick and Morty's compendium including character data, locations and episode facts.
+
+All data comes from the [Rick and Morty API](https://rickandmortyapi.com/)
 
 This project was built using this awesome comprehensive API.
+
+The API is called in the App.js file using the useEffect hook and an IIFE[Immediately Invoked Function Expression](https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/)
+
+A package like Axios could have been used of course.
+
+The API returns three important resources in the object: Characters, Locations, Episodes.
+
+The API automatically paginates the responsonse, and returns 20 records per page. This is a solid tutorial on [Pagination](https://academind.com/tutorials/reactjs-pagination)
 
 It is split up into a few different components including:
 
 ### Homepage
 
-The Homepage is the entry point for the app, and acts as a Character page. A Filter component is displayed along the left column which allows a search functionality to isolate across [Status,Species,Gender]
+The Homepage is the entry point for the app, and acts as a Character page. A Filter component is displayed along the left column which allows a filter functionality to isolate across [Status,Species,Gender]
 
 A Navbar displays the other components: Episode and Location.
+
+A Searchbar component is also displayed, allowing the user to search for characters across the entire compendium.
 
 ### Characters Cards
 
