@@ -15,12 +15,12 @@ const Episodes = () => {
       setEpisodes(data);
 
       //map character data
-      let charData = await Promise.all(
+      let moredata = await Promise.all(
         data.characters.map((char) => {
           return fetch(char).then((res) => res.json());
         })
       );
-      setResults(charData);
+      setResults(moredata);
     })();
   }, [API]);
 
