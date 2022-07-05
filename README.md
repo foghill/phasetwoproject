@@ -30,6 +30,9 @@ Paginate is an awesome package which helps create a page navigation bar
 
 ## App Breakdown
 
+![Alt Text](https://share.cleanshot.com/2FjsSN)
+
+
 The web app is split up across a few different components including but not limited to:
 
 ### Homepage
