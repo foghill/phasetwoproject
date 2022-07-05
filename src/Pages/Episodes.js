@@ -41,7 +41,7 @@ const Episodes = () => {
       <h4 className="text-center mb-4">Pick Episodes</h4>
       <div className="col-lg-8 col-12">
         <div className="row">
-          <div className="row">Cards are here </div>
+          <Cards results={results} />
         </div>
       </div>
     </div>
